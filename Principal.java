@@ -11,9 +11,7 @@ public class Principal {
         String ganador = "";
         String[] proceso_l1, proceso_l2, proceso_l3;
         proceso_l1 = new String[100];
-        proceso_l2 = new String[100];
-        proceso_l3 = new String[100];
-        llenadoVidaGrafico(proceso_l1, proceso_l2, proceso_l3);
+        llenadoVidaGrafico(proceso_l1);
         Luchador l1 = new Luchador();
         Luchador l2 = new Luchador();
         Luchador l3 = new Luchador();
@@ -94,27 +92,6 @@ public class Principal {
         }
     }
 
-
-    private static void muestraVidaGrafico_L3(String[] proceso_l1, Luchador l3) {
-        System.out.print("");
-        for (int i = 0; i <= proceso_l1.length - (100 - (l3.getVida())); i++) {
-
-            System.out.print(proceso_l1[i]);
-        }
-        System.out.println(" ");
-
-    }
-
-    private static void muestraVidaGrafico_L2(String[] proceso_l1, Luchador l2) {
-        System.out.print("");
-        for (int i = 0; i <= proceso_l1.length - (100 - (l2.getVida())); i++) {
-
-            System.out.print(proceso_l1[i]);
-        }
-        System.out.println(" ");
-
-    }
-
     private static void muestraVidaGrafico_L1(String[] proceso_l1, Luchador l1) {
         System.out.print("");
         for (int i = 0; i <= proceso_l1.length - (100 - (l1.getVida())); i++) {
@@ -125,7 +102,7 @@ public class Principal {
 
     }
 
-    private static void llenadoVidaGrafico(String[] proceso_l1, String[] proceso_l2, String[] proceso_l3) {
+    private static void llenadoVidaGrafico(String[] proceso_l1) {
         for (int i = 0; i < proceso_l1.length; i++) {
             proceso_l1[i] = "=";
 
@@ -285,3 +262,4 @@ public class Principal {
     }
 
 }
+
