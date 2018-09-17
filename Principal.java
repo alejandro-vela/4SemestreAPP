@@ -30,6 +30,11 @@ public class Principal {
         byte eleccion;
 
         eleccion = Menu(entrada);
+        menuSelectorJugadoresPc(eleccion, l1, opJugador, vida, l2, ganador, proceso_l1, l3);
+
+    }
+//------------------------METODOS-----------------------------------------------//
+    private static void menuSelectorJugadoresPc(byte eleccion, Luchador l1, int opJugador, boolean vida, Luchador l2, String ganador, String[] proceso_l1, Luchador l3) {
         switch (eleccion) {
             case 1:
                 System.out.println("\tElegiste a " + l1.getNombre() + "\n");
@@ -87,10 +92,9 @@ public class Principal {
                 System.out.println("Entrada incorrecta");
 
         }
-
     }
 
-//------------------------METODOS-----------------------------------------------//
+
     private static void muestraVidaGrafico_L3(String[] proceso_l1, Luchador l3) {
         System.out.print("");
         for (int i = 0; i <= proceso_l1.length - (100 - (l3.getVida())); i++) {
